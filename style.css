@@ -1,0 +1,221 @@
+/* CSS Reset */
+/* * {
+  border: red solid 1px;
+} */
+/* Reset box model */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset typography */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  font-family: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Reset anchor styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Add your custom styles below this line */
+body {
+  font-family: 'League Spartan', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff95f;
+  background: linear-gradient(45deg, #232323, #000000);
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 48px;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  color: #ff65df;
+}
+
+h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+/* HEADER */
+
+.logo {
+  text-align: center;
+}
+
+img {
+  width: 180px;
+  margin: 30px;
+}
+
+/* INPUTS SECTION */
+
+.inputs {
+  margin: 0 50px;
+  background: linear-gradient(45deg, #252525, #111111);
+  padding: 50px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #1e1e1e;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.left-group {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label {
+  font-size: 21px;
+  display: block;
+  color: white;
+  font-weight: 300;
+}
+
+.display-input {
+  font-size: 21px;
+}
+
+.input-range {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 36px;
+  padding: 0;
+}
+
+/* RESULTS SECTION */
+
+.results {
+  display: flex;
+  margin: 20px 80px;
+  padding: 0px 0;
+  text-align: center;
+  height: 150px;
+}
+
+.result {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 15px 0;
+}
+
+.result-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.display-output {
+  font-size: 30px;
+}
+
+/* TOOLTIP */
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+  color: #777;
+  opacity: 0.5;
+}
+
+.tooltip {
+  position: relative;
+  display: flex;
+}
+
+.tooltip-ver {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  padding: 10px;
+  width: 180px;
+  background-color: #00000080;
+  box-shadow: #00000030 5px 5px 5px;
+  border-radius: 10px;
+  color: #fff95f;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tooltip-text-hor {
+  transform: translate(calc(-50% + 12px), calc(-100% - 10px));
+}
+
+.tooltip-text-ver {
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.tooltip-text::after {
+  position: absolute;
+  display: block;
+  bottom: -10px;
+  left: calc(50% - 10px);
+  content: '';
+  border-top: #00000080 10px solid;
+  border-left: transparent 10px solid;
+  border-right: transparent 10px solid;
+}
+
+/* TODO: Redactar textos de ayuda para cada tooltip. */
+/* TODO: Make it responsive */
